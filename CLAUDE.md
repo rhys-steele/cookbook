@@ -91,6 +91,66 @@ When working on Laravel code, use these MCP tools from Laravel Boost:
 
 ---
 
+## Code Standards
+
+This codebase has personality. It's built like software, but it's meant to be read by humans.
+
+### Documentation
+
+**Every class, method, and function must have docblocks.**
+
+Good docblock example:
+```php
+/**
+ * Recipe Model
+ *
+ * The heart of the cookbook. Recipes can be either:
+ * - Staples: foundational components (herb butter, chicken stock)
+ * - Dishes: full recipes that build on staples
+ *
+ * This is software you can eat.
+ */
+class Recipe extends Model
+```
+
+### Inline Comments
+
+**Comment generously.** Explain the "why", not just the "what".
+
+```php
+// Fresh start? Nuke everything and rebuild.
+if ($this->option('fresh')) {
+    Recipe::query()->delete();
+}
+
+// Ensure v1 edition exists. This is our default for the first book.
+$edition = Edition::firstOrCreate(['slug' => 'v1'], [...]);
+```
+
+### Voice in Comments
+
+- **Confident, not corporate** — "Find the edition or blow up if it doesn't exist"
+- **Founder-y, not agency-y** — "This is software you can eat"
+- **Direct, not vague** — "QR codes depend on this" instead of "Important field"
+- **Human-readable** — "No one wants their salt before their onions"
+
+### Array Alignment
+
+Align inline comments in arrays for readability:
+
+```php
+protected $fillable = [
+    'edition_id',
+    'slug',          // Permanent. Do not change after QR generation.
+    'name',
+    'type',          // RecipeType: dish or staple
+    'course',        // Course: main, starter, side, etc.
+    'prep_time',     // Minutes
+];
+```
+
+---
+
 ## Canonical Routes
 
 These are encoded in printed QR codes — they must remain stable:

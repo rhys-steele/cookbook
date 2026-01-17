@@ -21,3 +21,7 @@ node_modules/
 # Generated exports
 /exports/json/*.json
 /exports/print/*.pdf
+
+# My personal notes / plans
+.me/
+

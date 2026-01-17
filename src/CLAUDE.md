@@ -95,11 +95,56 @@ protected function isAccessible(User $user, ?string $path = null): bool
 }
 </code-snippet>
 
-## Comments
-- Prefer PHPDoc blocks over inline comments. Never use comments within the code itself unless there is something very complex going on.
+## Comments & Documentation
 
-## PHPDoc Blocks
-- Add useful array shape type definitions for arrays when appropriate.
+**This codebase has personality. Every class, method, and function must have docblocks.**
+
+### PHPDoc Blocks
+- Every class must have a descriptive docblock explaining its purpose
+- Every public method must have a docblock explaining what it does
+- Add useful array shape type definitions for arrays when appropriate
+- Use the project's voice: confident, founder-y, human-readable
+
+Example:
+```php
+/**
+ * Recipe Model
+ *
+ * The heart of the cookbook. Recipes can be either:
+ * - Staples: foundational components (herb butter, chicken stock)
+ * - Dishes: full recipes that build on staples
+ *
+ * This is software you can eat.
+ */
+class Recipe extends Model
+{
+    /**
+     * Get the staples used in this dish.
+     *
+     * This is the magic of the system: dishes reference staples they build on.
+     * For example, "Steak Frites" uses the "Herb Butter" staple.
+     */
+    public function staples(): BelongsToMany
+    {
+        return $this->belongsToMany(Recipe::class, 'recipe_staple', 'recipe_id', 'staple_id');
+    }
+}
+```
+
+### Inline Comments
+- Comment generously throughout the code
+- Explain the "why", not just the "what"
+- Use the project's voice: "Fresh start? Nuke everything and rebuild." instead of "Delete all records"
+- Align comments in arrays for readability
+
+Example:
+```php
+protected $fillable = [
+    'slug',          // Permanent. Do not change after QR generation.
+    'type',          // RecipeType: dish or staple
+    'prep_time',     // Minutes
+];
+```
 
 ## Enums
 - Typically, keys in an Enum should be TitleCase. For example: `FavoritePerson`, `BestLake`, `Monthly`.

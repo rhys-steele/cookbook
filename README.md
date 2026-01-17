@@ -1,4 +1,4 @@
-# TBC (Snap to Plan) (Snap to Plan)
+# TBC (Snap to Plan)
 
 **Recipes That Build Menus**
 
@@ -371,6 +371,100 @@ Weekly cadence to ship in 2026:
 - No ambiguous steps
 - Realistic salt/heat/timing guidance
 - Every recipe has a shortcut path
+
+---
+
+## Code Standards
+
+This codebase has personality. It's built like software, but it's meant to be read by humans.
+
+### Documentation
+
+**Every class, method, and function must have docblocks.**
+
+```php
+/**
+ * Recipe Model
+ *
+ * The heart of the cookbook. Recipes can be either:
+ * - Staples: foundational components (herb butter, chicken stock)
+ * - Dishes: full recipes that build on staples
+ *
+ * This is software you can eat.
+ */
+class Recipe extends Model
+{
+    /**
+     * Get the staples used in this dish.
+     *
+     * This is the magic of the system: dishes reference staples they build on.
+     * For example, "Steak Frites" uses the "Herb Butter" staple.
+     *
+     * Self-referential many-to-many relationship on the Recipe model.
+     */
+    public function staples(): BelongsToMany
+    {
+        return $this->belongsToMany(
+            Recipe::class,
+            'recipe_staple',
+            'recipe_id',
+            'staple_id'
+        );
+    }
+}
+```
+
+### Inline Comments
+
+**Comment generously.** Explain the "why", not just the "what".
+
+```php
+// Fresh start? Nuke everything and rebuild.
+if ($this->option('fresh')) {
+    Recipe::query()->delete();
+    $this->info('Cleared existing recipes.');
+}
+
+// Ensure v1 edition exists. This is our default for the first book.
+$edition = Edition::firstOrCreate(
+    ['slug' => 'v1'],
+    ['name' => 'Version 1', 'is_active' => true]
+);
+```
+
+### Voice
+
+- **Confident, not corporate** — "Find the edition or blow up if it doesn't exist" instead of "Retrieve edition"
+- **Founder-y, not agency-y** — "This is software you can eat" instead of generic descriptions
+- **Direct, not vague** — "QR codes depend on this" instead of "Important field"
+- **Human-readable** — "No one wants their salt before their onions" in ingredient ordering
+
+### Array Alignment
+
+For readability, align inline comments in arrays:
+
+```php
+protected $fillable = [
+    'edition_id',
+    'slug',          // Permanent. Do not change after QR generation.
+    'name',
+    'type',          // RecipeType: dish or staple
+    'course',        // Course: main, starter, side, etc.
+    'status',        // RecipeStatus: seed -> draft -> testing -> published
+    'hero',          // Will this recipe have hero photography?
+    'servings',
+    'prep_time',     // Minutes
+    'cook_time',     // Minutes
+];
+```
+
+### PHP Conventions
+
+- PHP 8.4 with constructor property promotion
+- Explicit return types on all methods
+- Laravel 12 style: `casts()` method instead of `$casts` property
+- Curly braces for all control structures, even single-line
+- PHPUnit for tests (not Pest)
 
 ---
 
