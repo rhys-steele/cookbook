@@ -12,9 +12,11 @@ tags:
   - french
   - date-night
   - uses-herb-butter
+  - goes-well-with-red-wine
+  - fries
 created: 2026-01-17
 ---
 
 ## Raw idea:
 
-Classic bistro dish — pan-seared ribeye or sirloin rested with a melting coin of herb butter on top. Served with crispy oven fries or proper twice-cooked chips. Simple green salad on the side. The herb butter does all the heavy lifting. Shortcut: pre-made fries from freezer, focus energy on the steak.
+Classic bistro dish — pan-seared ribeye or sirloin rested with a melting coin of herb butter on top. Served with crispy oven fries or proper twice-cooked chips. Simple green salad on the side. The herb butter does all the heavy lifting. Shortcut: pre-made fries from freezer, focus energy on the steak (with very generous pre-cook salting) and the herb butter.

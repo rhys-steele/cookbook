@@ -10,6 +10,9 @@ tags:
   - tag-one
   - tag-two
 created: YYYY-MM-DD
+references:
+  - 'https://example.com/some-recipe-inspiration'
+  - 'Another inspirational source'
 ---
 
 ## Raw idea:
