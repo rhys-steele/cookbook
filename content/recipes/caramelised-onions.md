@@ -80,6 +80,3 @@ Low and slow — sliced onions cooked in butter and oil for 45+ minutes until de
 
 ## Raw idea
 Low and slow — sliced onions cooked in butter and oil for 45+ minutes until deeply golden and sweet. A splash of balsamic at the end optional. Freezes in portions. Unlocks burgers, toasties, tarts, pasta. Shortcut is jarred caramelised onion warmed with a knob of butter.
-
-## Snap Code
-Snap to Plan · Menu + shopping list · [QR]
