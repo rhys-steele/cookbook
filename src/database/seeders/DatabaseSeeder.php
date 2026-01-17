@@ -12,14 +12,14 @@ class DatabaseSeeder extends Seeder
 
     /**
      * Seed the application's database.
+     *
+     * Seeds admin user for Nova access, then recipe data.
      */
     public function run(): void
     {
-        // User::factory(10)->create();
+        // Create admin user for Nova
+        $this->call(AdminSeeder::class);
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-        ]);
+        // We'll add recipe seeding later via the seed:recipes command
     }
 }

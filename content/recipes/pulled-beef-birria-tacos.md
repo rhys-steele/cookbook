@@ -11,7 +11,7 @@ tags:
   - mexican
   - spicy
   - winter
-I   - tacos
+  - tacos
   - birria
   - slow-cooked
   - comfort-food
