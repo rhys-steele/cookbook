@@ -1,6 +1,6 @@
 # Brand & Narrative Quick Reference
 
-One-page reference for the Snap to Plan voice, story, and system.
+One-page reference for the TBC (Snap to Plan) voice, story, and system.
 
 ---
 
@@ -8,7 +8,7 @@ One-page reference for the Snap to Plan voice, story, and system.
 
 A software engineer who cooks constantly noticed the patterns: a handful of staples plus repeatable methods build into great meals. The hardest part is always planning.
 
-So they built a cookbook designed like a product — clean typography, grids, reusable components, predictable templates — and a companion web experience that turns any recipe into a menu and shopping list in seconds.
+So they created a cookbook designed and built like a product — clean typography, grids, reusable components, predictable templates — and a companion web experience that turns any recipe into a menu and shopping list in seconds.
 
 **This is software you can eat.**
 
@@ -58,6 +58,23 @@ A recurring motif with dual meaning:
 │  (outputs)  │
 └─────────────┘
 ```
+
+---
+
+## The Philosophy
+
+At the heart of the book is the **Staples Philosophy**.
+
+This is the idea that a handful of foundational recipes (Staples), prepared in advance, can unlock a wide range of dishes with less effort. It's about building a system in your kitchen.
+
+This approach is designed to:
+
+1.  **Reduce Cognitive Load:** By preparing staples ahead of time, daily cooking becomes faster and simpler.
+2.  **Encourage Mastery:** Focusing on foundational recipes builds true cooking intuition.
+3.  **Power Meal Planning:** The system of staples and dishes is what allows the "Snap to Plan" app to generate smart, efficient shopping lists.
+4.  **Embody "Software You Can Eat":** It applies the engineering principles of components and reusability to the art of cooking.
+
+The introduction of the book explains this philosophy in detail, but the core message is that by embracing this system, cooking becomes less stressful and more creative.
 
 ---
 

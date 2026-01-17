@@ -1,4 +1,4 @@
-# Snap to Plan
+# TBC (Snap to Plan) (Snap to Plan)
 
 **Recipes That Build Menus**
 
@@ -10,11 +10,25 @@
 
 I'm a software engineer who cooks constantly. Over time the patterns became obvious: a handful of staples plus repeatable methods build into great meals. The hardest part is always planning.
 
-So I built this — a cookbook designed like a product. Clean typography, grids, reusable components, predictable templates. And a companion web experience that turns any recipe into a menu and shopping list in seconds.
+So I created this — a cookbook designed and built like a product. Clean typography, grids, reusable components, predictable templates. And a companion web experience that turns any recipe into a menu and shopping list in seconds.
 
 **Staples** (components) → **Dishes** (builds) → **Menus** (compositions) → **Shopping Plans** (outputs)
 
 This is software you can eat.
+
+---
+
+## The Philosophy: A System for Your Kitchen
+
+At its heart, this cookbook is a system. It’s built on a "Staples Philosophy" — the idea that mastering a handful of foundational recipes unlocks a vast array of dishes with less effort and more confidence.
+
+This approach is designed to:
+
+1.  **Reduce Cognitive Load:** By preparing staples ahead of time, daily cooking becomes faster and simpler. You aren't starting from scratch every time.
+2.  **Encourage Mastery:** Focusing on these foundational recipes builds true cooking intuition and skill.
+3.  **Power Meal Planning:** The system of staples and re-usable dishes is what allows the "Snap to Plan" web experience to generate smart, efficient shopping lists.
+
+It's an application of software engineering principles to the art of cooking. The introduction to the book explains this in more detail, encouraging readers to embrace the system to make their cooking life easier and more creative.
 
 ---
 
