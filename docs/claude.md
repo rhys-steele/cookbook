@@ -23,6 +23,19 @@ Laravel + Nova as a **local authoring environment**. The same codebase becomes t
 
 **Why this order:** Content and data model must be solid before building public pages. The workshop lets us iterate on recipes, test the schema, and export to JSON for book tooling.
 
+### Laravel Boost MCP Tools
+
+When working on Laravel code, use these tools:
+
+| Tool | Use For |
+|------|---------|
+| `search-docs` | Search Laravel/Nova docs (use BEFORE coding) |
+| `list-artisan-commands` | Check artisan commands and options |
+| `tinker` | Execute PHP to debug or query models |
+| `database-query` | Read-only database queries |
+
+**Critical:** Always `search-docs` before making Laravel changes.
+
 ---
 
 ## Narrative Canon
@@ -103,6 +116,19 @@ Do not implement, suggest, or design for:
 | Brand narrative | `brand/narrative.md` |
 | This manual | `docs/claude.md` |
 | Laravel app | `src/` |
+| Laravel Boost guidelines | `src/CLAUDE.md` |
+| MCP config (root) | `.mcp.json` |
+| MCP config (src) | `src/.mcp.json` |
+
+### Laravel Conventions
+
+- PHP 8.4 with constructor property promotion
+- Explicit return types on all methods
+- Middleware in `bootstrap/app.php`
+- Casts in `casts()` method on models
+- PHPUnit for tests (not Pest)
+- Run `./vendor/bin/pint --dirty` before finalizing
+- Use `search-docs` MCP tool before making changes
 
 ### Naming
 
