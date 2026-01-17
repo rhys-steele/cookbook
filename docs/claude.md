@@ -9,7 +9,7 @@ This document is written for AI agents (Claude) working on the Snap to Plan proj
 Laravel + Nova as a **local authoring environment**. The same codebase becomes the production backend later.
 
 **What we're building now:**
-- Laravel + Nova scaffold in `app/`
+- Laravel + Nova scaffold in `src/`
 - Data model: Edition, Recipe, Ingredient, Tag, Menu, MenuItem
 - Nova resources for full CRUD
 - Seeder to import from `content/recipes/`
@@ -102,7 +102,7 @@ Do not implement, suggest, or design for:
 | Print exports | `exports/print/` |
 | Brand narrative | `brand/narrative.md` |
 | This manual | `docs/claude.md` |
-| Laravel app | `app/` |
+| Laravel app | `src/` |
 
 ### Naming
 

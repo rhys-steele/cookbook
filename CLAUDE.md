@@ -36,7 +36,7 @@ Laravel + Nova as a local authoring environment. Build the content, refine the d
 
 ## Commands
 
-From `app/`:
+From `src/`:
 
 ```bash
 # Install

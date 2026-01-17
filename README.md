@@ -269,7 +269,7 @@ created: YYYY-MM-DD
 
 ```
 cookbook/
-├── app/                    # Laravel codebase (Nova + Snap web)
+├── src/                    # Laravel codebase (Nova + Snap web)
 ├── content/
 │   └── recipes/            # Recipe seed files (.md)
 ├── exports/
@@ -423,7 +423,7 @@ Deploy, generate QR codes, print proof, ship.
 
 ## Commands
 
-From `app/`:
+From `src/`:
 
 ```bash
 # Install
