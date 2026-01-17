@@ -2,27 +2,75 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+For the full AI operating manual, see: `docs/claude.md`
+
 ## Project Overview
 
-Recipe Station is a two-part product:
-1. **Cookbook** - A curated recipe collection with clean typography and a "snap to plan" structural motif
-2. **Companion App** - A web app for saving recipes, building menus, and generating shopping lists
+**Snap to Plan** — A cookbook built like software.
 
-## Current Status
+Two products shipping together in 2026:
+1. **The Book** — A premium A4 hardcover cookbook
+2. **The Snap Experience** — A mobile-first web app opened via QR codes ("Snap Codes")
 
-This repository is in early planning stages with no code implemented yet.
+**Key constraint:** Both must ship together, polished. Single source of truth drives book, Snap, and exports.
 
-## App MVP Requirements
+## Architecture
 
-When building the companion app:
-- Authentication
-- Recipe CRUD with admin/editor workflow
-- Plan builder (select recipes into a plan)
-- Shopping list generator (ingredient aggregation + quantities)
-- Export/share (PDF/email/link)
+- **Laravel** — API, web, exports
+- **Nova** — Authoring/admin
+- **SQLite** local, **Postgres** production
+- **Blade + Alpine** or **Inertia** — Snap pages
 
-## Design Principles
+## Commands
 
-- Elegant, quiet design: consistent subtle systems over loud branding
-- Reduce cognitive load: sensible defaults, minimal choices
-- Fast to use: plan a week in under 5 minutes
+From `app/`:
+
+```bash
+# Install
+composer install && cp .env.example .env && php artisan key:generate
+
+# Run
+php artisan migrate --seed
+php artisan serve
+
+# Quality
+./vendor/bin/pint
+./vendor/bin/phpstan analyse
+php artisan test
+
+# Exports
+php artisan export:recipes v1
+php artisan export:menus v1
+```
+
+## Canonical Routes
+
+These are encoded in printed QR codes — they must remain stable:
+
+- `/scan` — entry point
+- `/r/{slug}` — recipe page
+- `/m/{slug}` — menu page
+
+**Hard rule:** If a slug changes after QR generation, regenerate QRs and re-proof.
+
+## Content System
+
+- **Staples** → **Dishes** → **Menus** → **Shopping Plans**
+- Recipe seeds: `content/recipes/<slug>.md`
+- Recipes have `type`: `staple` or `dish`
+
+## Non-Negotiables
+
+- Slugs are permanent once QR codes exist
+- QR codes encode canonical URLs only
+- "Snap to Plan" is structural, never gimmicky, never over hero photos
+- Single source of truth for all outputs
+
+## Key Files
+
+| File | Purpose |
+|------|---------|
+| `README.md` | Execution bible |
+| `docs/claude.md` | Full AI operating manual |
+| `brand/narrative.md` | Voice and copy reference |
+| `content/recipes/_TEMPLATE.md` | Recipe seed template |
