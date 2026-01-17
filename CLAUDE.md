@@ -14,6 +14,19 @@ Two products shipping together in 2026:
 
 **Key constraint:** Both must ship together, polished. Single source of truth drives book, Snap, and exports.
 
+## Current Phase: The Workshop
+
+Laravel + Nova as a local authoring environment. Build the content, refine the data model, export to JSON. This same codebase becomes the production backend later.
+
+**Focus now:**
+- Scaffold Laravel + Nova
+- Build data model (recipes, staples, tags, menus, editions)
+- CRUD via Nova
+- Seed recipes from `content/recipes/`
+- JSON export commands
+
+**Not yet:** Public Snap pages, production deployment, QR codes.
+
 ## Architecture
 
 - **Laravel** — API, web, exports

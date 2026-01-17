@@ -4,6 +4,27 @@ This document is written for AI agents (Claude) working on the Snap to Plan proj
 
 ---
 
+## Current Phase: The Workshop
+
+Laravel + Nova as a **local authoring environment**. The same codebase becomes the production backend later.
+
+**What we're building now:**
+- Laravel + Nova scaffold in `app/`
+- Data model: Edition, Recipe, Ingredient, Tag, Menu, MenuItem
+- Nova resources for full CRUD
+- Seeder to import from `content/recipes/`
+- Artisan commands: `export:recipes`, `export:menus`
+
+**What we're NOT building yet:**
+- Public-facing Snap pages (`/r/{slug}`, `/m/{slug}`)
+- Production deployment
+- QR code generation
+- Authentication for end users
+
+**Why this order:** Content and data model must be solid before building public pages. The workshop lets us iterate on recipes, test the schema, and export to JSON for book tooling.
+
+---
+
 ## Narrative Canon
 
 These facts are immutable. Never contradict them.

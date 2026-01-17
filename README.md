@@ -360,12 +360,41 @@ Weekly cadence to ship in 2026:
 
 ---
 
+## Development Phases
+
+### Phase 1: The Workshop (Current)
+
+Laravel + Nova as a local authoring environment. Build the content, refine the data model, export to JSON. This same codebase becomes the production backend.
+
+**Goals:**
+- Scaffold Laravel + Nova locally
+- Build data model: recipes, staples, tags, menus, editions
+- CRUD everything via Nova
+- Seed initial recipes from `content/recipes/`
+- Export commands for JSON
+- Iterate on content until book-ready
+
+**Not yet:**
+- Public Snap pages
+- Production deployment
+- QR code generation
+
+### Phase 2: The Snap Experience
+
+Once content is solid, build the public-facing Snap pages on top of the same Laravel app.
+
+### Phase 3: Production + Launch
+
+Deploy, generate QR codes, print proof, ship.
+
+---
+
 ## Roadmap (2026)
 
 ### Q1 — Foundations
 
+- **Set up Laravel + Nova workshop**
 - Lock shared contract (slugs, canonical URLs, editioning)
-- Scaffold Laravel + Nova
 - CRUD: recipes, staples, tags, menus
 - Export commands for JSON
 - Enter 10–15 anchor recipes + staples
