@@ -1,0 +1,23 @@
+# OS
+.DS_Store
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# Dependencies (Laravel will add more when scaffolded)
+/vendor/
+node_modules/
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+
+# Generated exports
+/exports/json/*.json
+/exports/print/*.pdf
