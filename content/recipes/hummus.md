@@ -239,3 +239,7 @@ Endless applications:
 ## Additional Notes
 Tahini quality matters enormously - look for runny, pourable tahini that's light in color. Avoid thick, paste-like tahini that separates with oil on top and bitter paste at bottom. Middle Eastern shops stock better tahini than supermarkets. The ice water trick is crucial - room temperature or warm water won't create the same silky texture. Some people peel chickpeas for ultra-smooth hummus but it's tedious and not necessary if you blend long enough. Fresh lemon juice (not bottled) makes a noticeable difference. This recipe scales easily - double or triple it if you're meal prepping. Costs about $2 to make and beats store-bought hollow hummus.
 
+
+
+## Feedback from maintainers
+1. 

@@ -193,3 +193,4 @@ The universal upgrade:
 ## Additional Notes
 Full-fat Greek yoghurt makes a huge difference here - low-fat versions are watery and lack richness. If you can't find Greek yoghurt, strain regular yoghurt through cheesecloth for an hour to thicken it. Fresh mint is non-negotiable - dried mint is a completely different flavor and won't give you that bright, cooling quality. This sauce is so versatile and quick that it should be in regular rotation. Make a batch on Sunday and use it all week on different dishes. Cost is minimal (under $3) and it makes everything taste fresh and intentional.
 
+# Author Notes
